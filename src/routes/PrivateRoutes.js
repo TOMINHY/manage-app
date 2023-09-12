@@ -2,7 +2,7 @@ import Alert from "react-bootstrap/Alert";
 import { useSelector } from "react-redux";
 const PrivateRoutes = (props) => {
   const user = useSelector((state) => state.user.account);
-  if (user && !user.auth) {
+  if (user && !user.email) {
     return (
       <>
         <Alert variant="danger" dismissible>
